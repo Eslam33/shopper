@@ -8,11 +8,30 @@
 <body>
 
 <div class="container" id="manage-vue">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">
+                <label for="usr"><h3>Search for Title:</h3></label>
+                <input type="text" class="form-control" v-model="searchString" placeholder="Enter your search terms" id="usr">
+            </div>
 
-    <div class="form-group">
-        <label for="usr"><h3>Search for Title:</h3></label>
-        <input type="text" class="form-control" v-model="searchString" placeholder="Enter your search terms" id="usr">
+        </div>
+        <div class="col-sm-6"></div>
+        <div class="col-sm-1">
+                    <form>
+                <button type="submit" class="btn btn-success">Login</button>
+                    </form>
+
+        </div>
+        <div class="col-sm-1">
+                <form>
+            <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+
+        </div>
+
     </div>
+
 
     <div class="row">
         <div class="col-lg-12 margin-tb">
