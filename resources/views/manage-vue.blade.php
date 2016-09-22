@@ -9,6 +9,11 @@
 
 <div class="container" id="manage-vue">
 
+    <div class="form-group">
+        <label for="usr"><h3>Search for Title:</h3></label>
+        <input type="text" class="form-control" v-model="searchString" placeholder="Enter your search terms" id="usr">
+    </div>
+
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -29,7 +34,7 @@
             <th>Description</th>
             <th width="200px">Action</th>
         </tr>
-        <tr v-for="item in items">
+        <tr v-for="item in items | searchFor searchString">
             <td>@{{ item.title }}</td>
             <td>@{{ item.description }}</td>
             <td>
